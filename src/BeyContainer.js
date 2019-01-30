@@ -1,6 +1,10 @@
 import React from "react";
+import beyImages from "./beyImages";
 
 class BeyContainer extends React.Component {
+  state = {
+    beyImages: beyImages
+  };
   render() {
     return (
       <div className="index">
