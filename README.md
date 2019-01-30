@@ -3,7 +3,7 @@
 - You have an api of Beyonce images that have a key of "favorite" which defaults to false
 - Your Beyonce images are held in state in the BeyContainer component
 - Render a list of all Beyonce images
-- When a User clicks on a Beyonce image it should change the "favorite" key true (if it was set to false) or false (if it was set to true)
+- When a User clicks on a Beyonce image it should change the "favorite" key true (if it was set to false or false (if it was set to true)
 
 # What are we practicing?
 
