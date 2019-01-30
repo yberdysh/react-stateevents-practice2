@@ -1,4 +1,4 @@
-# react-stateevents-hw
+# Bey-Slay
 
 - You have an api of Beyonce images that have a key of "favorite" which defaults to false
 - Your Beyonce images are held in state in the BeyContainer component
@@ -16,3 +16,5 @@
 ### Hint
 
 - To solve this project you may need to do some refactoring
+
+![beyonce gif](bey-slay.gif)
