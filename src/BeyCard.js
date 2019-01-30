@@ -5,12 +5,8 @@ class BeyCard extends React.Component {
     console.log(this.props);
     return (
       <div>
-        <h3>{this.props.bey.name}</h3>
-        <img
-          alt=""
-          src={this.props.bey.img}
-          onClick={() => this.props.clickHandler(this.props.bey)}
-        />
+        <h3>{/*Bey name goes here*/}</h3>
+        {/*image tag goes here*/}
       </div>
     );
   }
