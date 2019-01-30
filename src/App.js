@@ -1,25 +1,41 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import images from "./beyImages";
+import Favorites from "./Favorites";
+import BeyContainer from "./BeyContainer";
 
 class App extends Component {
+  state = {
+    beyImages: images
+  };
+
+  favorites = () => {
+    return this.state.beyImages.filter(bey => bey.favorite);
+  };
+
+  clickHandler = beyObj => {
+    console.log("clicked");
+    let newArr = [...this.state.beyImages];
+    let bey = newArr.find(bey => bey.id === beyObj.id);
+    bey.favorite = !bey.favorite;
+    this.setState({
+      beyImages: newArr
+    });
+  };
+
   render() {
+    console.log(this.state.beyImages);
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div className="container">
+        <BeyContainer
+          beyImages={this.state.beyImages}
+          clickHandler={this.clickHandler}
+        />
+        <Favorites
+          beyImages={this.favorites()}
+          clickHandler={this.clickHandler}
+        />
       </div>
     );
   }
