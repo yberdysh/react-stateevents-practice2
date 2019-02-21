@@ -2,9 +2,10 @@ import React, { Component } from "react";
 
 class BeyCard extends React.Component {
   render() {
-    let {name, img} = this.props.bey
+  console.log("PROPS IN BEYCARD", this.props)
+    let {name, img, id} = this.props.bey
     return (
-      <div>
+      <div onClick={() => this.props.toggleFavorite(id)}>
         <h3>{name}</h3>
         <img src={img}/>
       </div>
